@@ -293,16 +293,16 @@ body {
 }
 
 @media only screen 
-  and (max-device-width: 375px) 
+  and (min-device-width: 375px) 
   and (min-device-height: 667px) 
-  and (max-device-height: 896px) {
+  and (max-device-height: 932px) {
 
     body{
         overflow: hidden;
     }
 
-    .line3 {
-        top: 49%;
+    .letter .line3 {
+        display: none;
     }
     .reset {
         display: flex;
