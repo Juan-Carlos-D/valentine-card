@@ -67,7 +67,7 @@ $(document).ready(function () {
             });
 
             btnNo.off("click").on("click", function () {
-                showMessage("I respect that! Have a great day! 😁");
+                showMessage("I think your finger slipped 😁");
             });
         }
     }

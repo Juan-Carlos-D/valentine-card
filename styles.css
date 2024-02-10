@@ -302,6 +302,9 @@ body {
         font-size: 15px;
     }
 
+    .line3 {
+        top: 55%;
+    }
     .reset {
         display: flex;
         flex-direction: column;
