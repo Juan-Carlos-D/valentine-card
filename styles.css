@@ -139,6 +139,7 @@ body {
     padding: 10px; /* Add padding for better visibility */
     border-radius: 5px; /* Add border-radius for a rounded appearance */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add box-shadow for a subtle effect */
+    z-index: 10;
 }
 
 
