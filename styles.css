@@ -297,6 +297,11 @@ body {
     body{
         overflow: hidden;
     }
+
+    .words {
+        font-size: 15px;
+    }
+
     .reset {
         display: flex;
         flex-direction: column;
