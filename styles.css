@@ -82,7 +82,7 @@ body {
     left: 10%;
     width: 80%;
     height: 14%;
-    font-size: 18px;
+    font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
 }
@@ -92,8 +92,13 @@ body {
     text-align:center;
 }
 .line2 {
-    top: 15%;
+    top: 18%;
     text-align:center;
+}
+
+.line3 {
+    top: 35%;
+    text-align: center;
 }
 
 .yes-no-buttons {
