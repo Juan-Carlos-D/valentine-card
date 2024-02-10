@@ -302,11 +302,12 @@ body {
     }
 
     .words {
-        font-size: 15px;
+        font-size: 12px !important;
     }
 
     .line3 {
-        top: 70%;
+        font-size: 10px !important;
+        top: 50% !important;
     }
     .reset {
         display: flex;
@@ -315,6 +316,6 @@ body {
     }
 
     .reset button {
-        margin-top: 10px; /* Adjust the margin-top value as needed */
+        margin-top: 60px; /* Adjust the margin-top value as needed */
     }
 }
