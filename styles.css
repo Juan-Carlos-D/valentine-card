@@ -55,34 +55,6 @@ body {
     border-bottom-right-radius: 6px;
 }
 
-.btns-container {
-    position: absolute;
-    bottom: 32%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-around;
-    width: 60%;
-
-}
-
-.yes-btn,
-.no-btn {
-    background-color: #FF6863;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.yes-btn:hover,
-.no-btn:hover {
-    background-color: #FFC3DA;
-}
-
 
 .letter {
     position: relative;
@@ -124,6 +96,25 @@ body {
     text-align:center;
 }
 
+.yes-button,
+.no-button {
+    background-color: #FF6863;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    display: inline-block;
+}
+
+
+.yes-button:hover,
+.no-button:hover {
+    background-color: #FF8BA0;
+}
 
 .open .flap {
     transform: rotatex(180deg);
