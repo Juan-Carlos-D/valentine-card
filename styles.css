@@ -258,6 +258,9 @@ body {
     }
 }
 
+#reset {
+    display: none;
+}
 
 .reset {
     text-align: center;

@@ -22,6 +22,8 @@ $(document).ready(function () {
         addYesNoButtons();
         // Hide the "Open for a surprise" button
         btn_open.hide();
+        // Show the "Seal & Return" button
+        btn_reset.show();
     }
 
     function closeEnvelope() {
@@ -30,6 +32,8 @@ $(document).ready(function () {
         removeYesNoButtons();
         // Show the "Open for a surprise" button
         btn_open.show();
+        // Hide the "Seal & Return" button
+        btn_reset.hide();
     }
 
     function addYesNoButtons() {
