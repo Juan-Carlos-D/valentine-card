@@ -96,6 +96,11 @@ body {
     text-align:center;
 }
 
+.yes-no-buttons {
+    text-align: center;
+    margin-top: 20px; /* Adjust the top margin as needed */
+}
+
 .yes-button,
 .no-button {
     background-color: #FF6863;
@@ -110,10 +115,13 @@ body {
     display: inline-block;
 }
 
-
 .yes-button:hover,
 .no-button:hover {
     background-color: #FF8BA0;
+}
+
+.yes-button {
+    margin-right: 10px; /* Adjust the right margin as needed */
 }
 
 .open .flap {

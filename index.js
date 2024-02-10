@@ -44,13 +44,17 @@ $(document).ready(function () {
     }
 
     function addYesNoButtons() {
+        // Create a wrapper div for centering the buttons
+        var buttonsWrapper = $("<div>").addClass("yes-no-buttons");
+        envelope.append(buttonsWrapper);
+
         // Create and append the "Yes" button
         var btnYes = $("<button>")
             .attr("id", "btn_yes")
             .text("Yes")
             .addClass("yes-button")
             .hide(); // Initially hide the button
-        envelope.append(btnYes);
+        buttonsWrapper.append(btnYes);
 
         // Create and append the "No" button
         var btnNo = $("<button>")
@@ -58,7 +62,7 @@ $(document).ready(function () {
             .text("No")
             .addClass("no-button")
             .hide(); // Initially hide the button
-        envelope.append(btnNo);
+        buttonsWrapper.append(btnNo);
 
         // Show the buttons with a delay (adjust the delay as needed)
         setTimeout(function () {
@@ -68,7 +72,7 @@ $(document).ready(function () {
     }
 
     function removeYesNoButtons() {
-        // Remove the "Yes" and "No" buttons
-        $("#btn_yes, #btn_no").remove();
+        // Remove the "Yes" and "No" buttons and the wrapper div
+        $(".yes-no-buttons").remove();
     }
 });
