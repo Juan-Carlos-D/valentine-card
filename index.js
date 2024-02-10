@@ -2,6 +2,7 @@ $(document).ready(function () {
     var envelope = $("#envelope");
     var btn_open = $("#open");
     var btn_reset = $("#reset");
+    var messageContainer = $(".message-container");
 
     envelope.click(function () {
         openEnvelope();
@@ -37,7 +38,7 @@ $(document).ready(function () {
             // Create a wrapper div for centering the buttons
             var buttonsWrapper = $("<div>").addClass("yes-no-buttons");
             envelope.append(buttonsWrapper);
-    
+
             // Create and append the "Yes" button
             var btnYes = $("<button>")
                 .attr("id", "btn_yes")
@@ -45,7 +46,7 @@ $(document).ready(function () {
                 .addClass("yes-button")
                 .hide(); // Initially hide the button
             buttonsWrapper.append(btnYes);
-    
+
             // Create and append the "No" button
             var btnNo = $("<button>")
                 .attr("id", "btn_no")
@@ -53,24 +54,23 @@ $(document).ready(function () {
                 .addClass("no-button")
                 .hide(); // Initially hide the button
             buttonsWrapper.append(btnNo);
-    
+
             // Show the buttons with a delay (adjust the delay as needed)
             setTimeout(function () {
                 btnYes.show();
                 btnNo.show();
             }, 600);
-    
+
             // Add event listeners
             btnYes.off("click").on("click", function () {
                 showMessage("😍😍😍😍😍");
             });
-    
+
             btnNo.off("click").on("click", function () {
                 showMessage("I respect that! Have a great day! 😁");
             });
         }
     }
-    
 
     function removeYesNoButtons() {
         // Remove the "Yes" and "No" buttons and the wrapper div
@@ -78,16 +78,26 @@ $(document).ready(function () {
     }
 
     function showMessage(message) {
-        // Create a message div and append it to the envelope
+        // Check if message container exists, otherwise create it
+        if (messageContainer.length === 0) {
+            messageContainer = $("<div>").addClass("message-container");
+            $("body").append(messageContainer);
+        }
+    
+        // Create a message div and append it to the container
         var messageDiv = $("<div>")
             .addClass("message")
             .text(message);
-        envelope.append(messageDiv);
-
-        // Remove the message after a delay (adjust the delay as needed)
+    
+        // Append the message div to the container
+        messageContainer.append(messageDiv);
+    
+        // Fade out and remove the message after a delay (adjust the delay as needed)
         setTimeout(function () {
-            messageDiv.remove();
-        }, 3000); // Remove the message after 3 seconds
+            messageDiv.fadeOut(500, function () {
+                messageContainer.remove();
+            });
+        }, 3000); // Fade out the message after 3 seconds
     }
+    
 });
-
