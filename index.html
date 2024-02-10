@@ -5,9 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="styles.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="index.js"></script>
         <title>Valentine's Day Card</title>
     </head>
     <body>
+        <div id ="particles-js"></div>
         <div class="envelope-wrapper">
             <div id="envelope" class="close">
                 <div class="front flap"></div>
@@ -15,12 +17,14 @@
                 <div class="letter">
                     <p class="words line1">Will you</p>
                     <p class="words line2">be my Valentine?</p>
+
                     <div class="btns-container">
                         <button class="yes-btn">Yes</button>
                         <button class="no-btn">No</button>
                     </div>
 
                 </div>
+
                 <div class="hearts">
                     <div class="heart a1"></div>
                     <div class="heart a2"></div>
@@ -32,6 +36,17 @@
             <button id="open">Open for a surprise </button>
             <button id="reset">Seal & Return</button>
         </div>
-        <script src="index.js"></script>
+
+<!-- particle js -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<!-- first particles.js file and then app.js-->
+<script src="particles.js"></script>
+<script src="app.js"></script>
+<script>
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+</script>
     </body>
 </html>
